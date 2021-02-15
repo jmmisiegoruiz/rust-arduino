@@ -1,0 +1,18 @@
+[package]
+name = "blink"
+version = "0.1.0"
+authors = ["jd68770 <josematias.misiego@kbc.be>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lcd = "0.3.0"
+# A panic handler is needed.  This is a crate with the most basic one.
+panic-halt = "0.2.0"
+shared = { path = "../shared" }
+avr_delay = { git = "https://github.com/avr-rust/delay" }
+
+[dependencies.arduino-uno]
+git = "https://github.com/Rahix/avr-hal"
+rev = "536c5d"
